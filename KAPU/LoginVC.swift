@@ -18,9 +18,11 @@ class LoginVC: UIViewController {
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var firstNameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
+    var loader: KapuLoader?
     
     override func viewDidLoad() {
         self.databaseRef = FIRDatabase.database().reference()
+        self.loader = KapuLoader()
     }
     
     @IBAction private func signUpPressed() {
@@ -58,11 +60,20 @@ class LoginVC: UIViewController {
     private func login() {
         if let providerData = FIRAuth.auth()?.currentUser?.providerData {
                 print("user is signed in")
-            }
+        } else {
+            
         FIRAuth.auth()?.signIn(withEmail: "test@test.com", password: "qwerty") { (user, error) in
             
             if error == nil {
                 print("You have successfully logged in")
+              /*  let kapu = Kapu(title: "Peace On Earth A Wonderful Wish But No Way?",
+                                body: "The following article covers a topic that has recently moved to center stage–at least it seems that way. If you’ve been thinking you need to know more about unconditional love, here’s your",
+                                categoryName: "Transportation",
+                                creationDate: "05 Jan 2017, 10:30PM",
+                                creatorName: "Annie Roger")
+                if let loader = self.loader {
+                    loader.addNew(kapu: kapu)
+                }*/
                 
             } else {
                 
@@ -74,11 +85,9 @@ class LoginVC: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
-        
-      /*  let kapu = new Kapu(title: "What to do with lot in 49th street?",
-                            body: <#T##String#>, categoryName: <#T##String#>, creationDate: <#T##String#>, creatorName: <#T##String#>)
- 
- */
+        }
+    
+       
     }
 }
 
