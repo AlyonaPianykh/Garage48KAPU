@@ -15,6 +15,7 @@
 		3DC021921E6AB5050061FD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */; };
 		9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */; };
 		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
+		9BBC7AA71E6B41F700A63AB5 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC7AA61E6B41F700A63AB5 /* FilterTableViewCell.swift */; };
 		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
 		C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */; };
 		C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */; };
@@ -36,6 +37,7 @@
 		3DC021931E6AB5050061FD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
+		9BBC7AA61E6B41F700A63AB5 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuLoader.swift; sourceTree = "<group>"; };
 		C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKapuTableVC.swift; sourceTree = "<group>"; };
@@ -88,13 +90,13 @@
 		3DC021831E6AB5050061FD74 /* KAPU */ = {
 			isa = PBXGroup;
 			children = (
+				9BBC7AA51E6B41CB00A63AB5 /* TableViewCells */,
 				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
 				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
 				C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */,
 				C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */,
-				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
 				3DC0219B1E6AB61A0061FD74 /* Resources */,
 			);
 			path = KAPU;
@@ -104,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				3DC021881E6AB5050061FD74 /* Main.storyboard */,
-				C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */,
-				C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */,
 				3DC0218E1E6AB5050061FD74 /* Assets.xcassets */,
 				3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */,
 				3DC021931E6AB5050061FD74 /* Info.plist */,
@@ -113,6 +113,17 @@
 				C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		9BBC7AA51E6B41CB00A63AB5 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */,
+				C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */,
+				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
+				9BBC7AA61E6B41F700A63AB5 /* FilterTableViewCell.swift */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		E6B941F156186305915071FD /* Frameworks */ = {
@@ -256,6 +267,7 @@
 				3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */,
 				3DC021871E6AB5050061FD74 /* LoginVC.swift in Sources */,
 				C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */,
+				9BBC7AA71E6B41F700A63AB5 /* FilterTableViewCell.swift in Sources */,
 				3DC021851E6AB5050061FD74 /* AppDelegate.swift in Sources */,
 				C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */,
 			);
