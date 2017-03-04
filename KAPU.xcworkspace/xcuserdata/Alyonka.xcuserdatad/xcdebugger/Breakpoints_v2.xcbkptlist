@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510323872.295362"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "signUp()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510324527.559993"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114">
+            startingLineNumber = "85"
+            endingLineNumber = "85">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510323872.295362"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "signUp()"
             landmarkType = "7">
          </BreakpointContent>
@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510323872.295362"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "LoginVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510323872.295362"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "logInPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510323872.295362"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "login()"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,57 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KAPU/LoginVC.swift"
-            timestampString = "510322954.51087"
+            timestampString = "510328616.510946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "globalinit_33_06F251EE7B24CA772ED439063354FAE9_func1"
-                  moduleName = "KAPU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Alyonka/Documents/Garage48KAPU/KAPU/LoginVC.swift"
-                  timestampString = "510324527.747924"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KAPU.USERS.unsafeMutableAddressor : Swift.String"
-                  moduleName = "KAPU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Alyonka/Documents/Garage48KAPU/KAPU/LoginVC.swift"
-                  timestampString = "510324527.753432"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KAPU/LoginVC.swift"
-            timestampString = "510323946.357143"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

@@ -83,6 +83,7 @@
                                                 <rect key="frame" x="156" y="0.0" width="45" height="30"/>
                                                 <state key="normal" title="LOGIN"/>
                                                 <connections>
+                                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVT-6Q-58z"/>
                                                     <segue destination="Pyg-h6-XDl" kind="show" id="RAP-oO-fhh"/>
                                                 </connections>
                                             </button>

@@ -11,6 +11,10 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
+let KAPUS: String = "requests"
+let USERS: String = "users"
+
+
 class Kapu {
     let body: String
     let categoryName: String
@@ -62,5 +66,16 @@ class KapuLoader {
         }
         
         print("\(allKapus)")
+    }
+    
+    func addNew(kapu: Kapu) {
+        let key = self.databaseRef.child(KAPUS).childByAutoId().key
+        let post = ["title": kapu.title,
+                    "body": kapu.body,
+                    "categoryName": kapu.categoryName,
+                    "creatorName": kapu.creatorName,
+                    "creationDate": kapu.creationDate]
+        let childUpdates = ["/\(KAPUS)/\(key)": post]
+        self.databaseRef.updateChildValues(childUpdates)
     }
 }
