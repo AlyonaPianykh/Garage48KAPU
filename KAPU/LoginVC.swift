@@ -11,13 +11,22 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginVC: UIViewController {
 
+let KAPUS: String = "requests"
+let USERS: String = "users"
+
+
+class LoginVC: UIViewController {
+    var databaseRef: FIRDatabaseReference!
+    
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var firstNameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     
-
+    override func viewDidLoad() {
+        self.databaseRef = FIRDatabase.database().reference()
+    }
+    
     @IBAction private func signUpPressed() {
         self.signUp()
     }
@@ -44,6 +53,16 @@ class LoginVC: UIViewController {
             
             usersTable.child(userId).setValue(["email" : email, "first_name" : firstname])
         }
+    }
+    
+    @IBAction private func logInPressed() {
+            self.login()
+    }
+    
+    private func login() {
+        if let providerData = FIRAuth.auth()?.currentUser?.providerData {
+                print("user is signed in")
+            }
     }
 }
 
