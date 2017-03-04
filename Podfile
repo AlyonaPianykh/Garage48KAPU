@@ -9,7 +9,7 @@ target 'KAPU' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'Firebase/Auth'
-    pod 'IQKeyboardManagerSwift'
+    #pod 'IQKeyboardManagerSwift'
 end
 
 
