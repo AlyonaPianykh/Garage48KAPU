@@ -148,8 +148,12 @@ extension AddKapuVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        numberOfOptions += 1
-        self.table.reloadData()
+        
+        if (indexPath.section == 2 && indexPath.row == numberOfOptions - 1) {
+            numberOfOptions += 1
+            self.table.reloadData()
+        }
+       
     }
     
 }
