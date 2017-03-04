@@ -13,6 +13,8 @@
 		3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0218B1E6AB5050061FD74 /* KAPU.xcdatamodeld */; };
 		3DC0218F1E6AB5050061FD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC0218E1E6AB5050061FD74 /* Assets.xcassets */; };
 		3DC021921E6AB5050061FD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */; };
+		9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */; };
+		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
 		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
 		E58AEC432CB150A3CB70981B /* Pods_KAPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 		3DC0218E1E6AB5050061FD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DC021911E6AB5050061FD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC021931E6AB5050061FD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
+		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5709B9FA3C57D530CB95945 /* Pods-KAPU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAPU.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAPU/Pods-KAPU.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		3DC021831E6AB5050061FD74 /* KAPU */ = {
 			isa = PBXGroup;
 			children = (
+				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
+				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
 				3DC0219B1E6AB61A0061FD74 /* Resources */,
@@ -137,7 +143,8 @@
 				TargetAttributes = {
 					3DC021801E6AB5050061FD74 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = PZPU8LYSXX;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -226,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */,
+				9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */,
 				3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */,
 				3DC021871E6AB5050061FD74 /* LoginVC.swift in Sources */,
 				3DC021851E6AB5050061FD74 /* AppDelegate.swift in Sources */,
@@ -350,7 +359,8 @@
 			baseConfigurationReference = 2F6D458C3A2DC756590B916A /* Pods-KAPU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PZPU8LYSXX;
 				INFOPLIST_FILE = KAPU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.demoapp.garage48.test;
@@ -364,7 +374,8 @@
 			baseConfigurationReference = D5709B9FA3C57D530CB95945 /* Pods-KAPU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PZPU8LYSXX;
 				INFOPLIST_FILE = KAPU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.demoapp.garage48.test;
