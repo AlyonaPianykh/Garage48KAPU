@@ -57,7 +57,11 @@ extension IssuesViewController :UITableViewDataSource{
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "IssueCell", for: indexPath) as! IssueTableViewCell
-        //configure cell
+        let kapu = kapus.allKapus[indexPath.row]
+        cell.categoryLabel.text = kapu.categoryName
+        cell.issueDescriptionLabel.text = kapu.title
+                //body
+
         return cell
     }
     
