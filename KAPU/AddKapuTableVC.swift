@@ -29,7 +29,7 @@ class AddKapuVC: UIViewController {
     
     @IBAction func postKapu(_ sender: Any) {
         let titleTextFieldCell = self.table.cellForRow(at: IndexPath(row: 0, section: 0)) as? TextFieldTableViewCell
-        let textAreaCell = self.table.cellForRow(at: IndexPath(row: 0, section: 1)) as? TextFieldTableViewCell
+        let textAreaCell = self.table.cellForRow(at: IndexPath(row: 0, section: 1)) as? TextAreaTableViewCell
        
         let title = titleTextFieldCell?.textField.text ?? "defaultTitle"
         let description = textAreaCell?.textField.text ?? "defaultDescription"

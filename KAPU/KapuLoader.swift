@@ -92,10 +92,9 @@ class KapuLoader {
         let childUpdates = ["/\(KAPUS)/\(key)": post]
         self.databaseRef.updateChildValues(childUpdates)
         
-        
-        for option in kapu.options {
-            let keyOption = self.databaseRef.child(KAPUS).child("options").childByAutoId().key
-            let childUpdates = ["/\(KAPUS)/options/\(keyOption)/": option]
+        for option in options {
+            let keyOption = self.databaseRef.child(KAPUS).child(key).child("options").childByAutoId().key
+            let childUpdates = ["/\(KAPUS)/\(key)/options/\(keyOption)/": option]
             self.databaseRef.updateChildValues(childUpdates)
         }
         
