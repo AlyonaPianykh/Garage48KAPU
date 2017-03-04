@@ -10,10 +10,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
-
-
-
-
+import FirebaseMessaging
 
 class LoginVC: UIViewController {
     var databaseRef: FIRDatabaseReference!
@@ -50,6 +47,8 @@ class LoginVC: UIViewController {
                 return
             }
             
+            FIRMessaging.messaging().subscribe(toTopic: "topics/app")
+            
             let usersTable = FIRDatabase.database().reference().child("users")
             
             usersTable.child(userId).setValue(["email" : email, "first_name" : firstname])
@@ -69,6 +68,9 @@ class LoginVC: UIViewController {
             
             if error == nil {
                 print("You have successfully logged in")
+                
+                FIRMessaging.messaging().subscribe(toTopic: "topics/app")
+                
               /*  let kapu = Kapu(title: "Peace On Earth A Wonderful Wish But No Way?",
                                 body: "The following article covers a topic that has recently moved to center stage–at least it seems that way. If you’ve been thinking you need to know more about unconditional love, here’s your",
                                 categoryName: "Transportation",

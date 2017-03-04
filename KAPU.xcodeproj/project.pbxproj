@@ -13,9 +13,10 @@
 		3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0218B1E6AB5050061FD74 /* KAPU.xcdatamodeld */; };
 		3DC0218F1E6AB5050061FD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC0218E1E6AB5050061FD74 /* Assets.xcassets */; };
 		3DC021921E6AB5050061FD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */; };
+		3DD133301E6B4EE3009BA5D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DD1332F1E6B4EE3009BA5D8 /* GoogleService-Info.plist */; };
+		3DD133321E6B5D16009BA5D8 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD133311E6B5D16009BA5D8 /* PushManager.swift */; };
 		9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */; };
 		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
-		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
 		C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */; };
 		C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */; };
 		C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */; };
@@ -34,9 +35,10 @@
 		3DC0218E1E6AB5050061FD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DC021911E6AB5050061FD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC021931E6AB5050061FD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DD1332F1E6B4EE3009BA5D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DD133311E6B5D16009BA5D8 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 		9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
-		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuLoader.swift; sourceTree = "<group>"; };
 		C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKapuTableVC.swift; sourceTree = "<group>"; };
 		C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */,
 				C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */,
 				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
+				3DD133311E6B5D16009BA5D8 /* PushManager.swift */,
 				3DC0219B1E6AB61A0061FD74 /* Resources */,
 			);
 			path = KAPU;
@@ -110,7 +113,7 @@
 				3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */,
 				3DC021931E6AB5050061FD74 /* Info.plist */,
 				3DC0218B1E6AB5050061FD74 /* KAPU.xcdatamodeld */,
-				C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */,
+				3DD1332F1E6B4EE3009BA5D8 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -130,12 +133,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DC021961E6AB5050061FD74 /* Build configuration list for PBXNativeTarget "KAPU" */;
 			buildPhases = (
+				1BC50AA7CE8E8B2AA584ED33 /* 📦 Check Pods Manifest.lock */,
 				46055E4C3CE3885C80967ED2 /* [CP] Check Pods Manifest.lock */,
 				3DC0217D1E6AB5050061FD74 /* Sources */,
 				3DC0217E1E6AB5050061FD74 /* Frameworks */,
 				3DC0217F1E6AB5050061FD74 /* Resources */,
 				34ED936A1F6E18568BA2D22F /* [CP] Embed Pods Frameworks */,
 				B15DA6AABE752D234A6FD995 /* [CP] Copy Pods Resources */,
+				57F5212A091AD4CB8CB69F06 /* 📦 Embed Pods Frameworks */,
+				707426D515BEAB7DAD43F17A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,8 +164,8 @@
 				TargetAttributes = {
 					3DC021801E6AB5050061FD74 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = PZPU8LYSXX;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 7LHZN6LW9B;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -187,8 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC021921E6AB5050061FD74 /* LaunchScreen.storyboard in Resources */,
-				C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */,
 				3DC0218F1E6AB5050061FD74 /* Assets.xcassets in Resources */,
+				3DD133301E6B4EE3009BA5D8 /* GoogleService-Info.plist in Resources */,
 				3DC0218A1E6AB5050061FD74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +202,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1BC50AA7CE8E8B2AA584ED33 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		34ED936A1F6E18568BA2D22F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +247,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		57F5212A091AD4CB8CB69F06 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KAPU/Pods-KAPU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		707426D515BEAB7DAD43F17A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KAPU/Pods-KAPU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B15DA6AABE752D234A6FD995 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD133321E6B5D16009BA5D8 /* PushManager.swift in Sources */,
 				C2A0AD751E6B1A6900E42146 /* TextAreaTableViewCell.swift in Sources */,
 				9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */,
 				9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */,
@@ -380,11 +432,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PZPU8LYSXX;
+				DEVELOPMENT_TEAM = 7LHZN6LW9B;
 				INFOPLIST_FILE = KAPU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.demoapp.garage48.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.garage48.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9468cc86-ffc1-428a-b9cf-d136d5d8d4ad";
+				PROVISIONING_PROFILE_SPECIFIER = "KAPU Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -395,10 +450,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PZPU8LYSXX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KAPU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.demoapp.garage48.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.garage48.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
