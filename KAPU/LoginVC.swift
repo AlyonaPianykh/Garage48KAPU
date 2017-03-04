@@ -47,8 +47,6 @@ class LoginVC: UIViewController {
                 return
             }
             
-            FIRMessaging.messaging().subscribe(toTopic: "topics/app")
-            
             let usersTable = FIRDatabase.database().reference().child("users")
             
             usersTable.child(userId).setValue(["email" : email, "first_name" : firstname])
@@ -69,6 +67,8 @@ class LoginVC: UIViewController {
             if error == nil {
                 print("You have successfully logged in")
                 
+                PushManager.shared.subscribeToAllFeeds()
+                
                 FIRMessaging.messaging().subscribe(toTopic: "topics/app")
                 
               /*  let kapu = Kapu(title: "Peace On Earth A Wonderful Wish But No Way?",
@@ -81,6 +81,8 @@ class LoginVC: UIViewController {
                 }*/
                 
             } else {
+                
+                PushManager.shared.subscribeToAllFeeds()
                 
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 
