@@ -12,8 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 
-let KAPUS: String = "requests"
-let USERS: String = "users"
+
 
 
 class LoginVC: UIViewController {

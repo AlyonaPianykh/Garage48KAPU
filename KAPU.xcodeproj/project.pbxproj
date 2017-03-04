@@ -84,8 +84,8 @@
 				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
-				3DC0219B1E6AB61A0061FD74 /* Resources */,
 				C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */,
+				3DC0219B1E6AB61A0061FD74 /* Resources */,
 			);
 			path = KAPU;
 			sourceTree = "<group>";

@@ -10,9 +10,15 @@ import UIKit
 
 class IssuesViewController: UIViewController {
 
+    @IBOutlet var table: UITableView!
+    let kapus = KapuLoader()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        kapus.getKapusFromFB{
+            self.table.reloadData()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -46,7 +52,7 @@ extension IssuesViewController :UITableViewDelegate{
 extension IssuesViewController :UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 1
+        return kapus.allKapus.count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{

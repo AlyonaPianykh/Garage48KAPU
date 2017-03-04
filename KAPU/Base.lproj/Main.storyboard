@@ -152,7 +152,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="IssuesCell" tableViewCell="Ymc-3e-M8g" id="aNO-8b-Rq1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYM-3o-aKC">
@@ -240,6 +240,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="BHB-31-vkR"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="Tbb-ew-El2" id="qvS-vx-V1O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3C9-ap-dhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
