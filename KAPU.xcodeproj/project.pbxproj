@@ -16,6 +16,7 @@
 		9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */; };
 		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
 		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
+		C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */; };
 		E58AEC432CB150A3CB70981B /* Pods_KAPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuLoader.swift; sourceTree = "<group>"; };
 		C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5709B9FA3C57D530CB95945 /* Pods-KAPU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAPU.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAPU/Pods-KAPU.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
 				3DC0219B1E6AB61A0061FD74 /* Resources */,
+				C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */,
 			);
 			path = KAPU;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */,
 				3DC021871E6AB5050061FD74 /* LoginVC.swift in Sources */,
 				3DC021851E6AB5050061FD74 /* AppDelegate.swift in Sources */,
+				C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
