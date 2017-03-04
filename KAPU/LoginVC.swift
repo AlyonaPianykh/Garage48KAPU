@@ -62,6 +62,26 @@ class LoginVC: UIViewController {
         if let providerData = FIRAuth.auth()?.currentUser?.providerData {
                 print("user is signed in")
             }
+        FIRAuth.auth()?.signIn(withEmail: "test@test.com", password: "qwerty") { (user, error) in
+            
+            if error == nil {
+                print("You have successfully logged in")
+                
+            } else {
+                
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+        
+      /*  let kapu = new Kapu(title: "What to do with lot in 49th street?",
+                            body: <#T##String#>, categoryName: <#T##String#>, creationDate: <#T##String#>, creatorName: <#T##String#>)
+ 
+ */
     }
 }
 
