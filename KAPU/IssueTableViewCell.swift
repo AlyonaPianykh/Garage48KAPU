@@ -13,7 +13,8 @@ class IssueTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var issueDescriptionLabel: UILabel!
     @IBOutlet weak var issuePicture: UIImageView!
-    @IBOutlet weak var authorAndDateLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var pictureHeight: NSLayoutConstraint!
     @IBOutlet weak var descriptionHeight: NSLayoutConstraint!

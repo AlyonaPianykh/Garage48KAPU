@@ -60,7 +60,8 @@ extension IssuesViewController :UITableViewDataSource{
         let kapu = kapus.allKapus[indexPath.row]
         cell.categoryLabel.text = kapu.categoryName
         cell.issueDescriptionLabel.text = kapu.title
-                //body
+        cell.authorLabel.text = kapu.creatorName
+        cell.dateLabel.text = kapu.creationDate
 
         return cell
     }

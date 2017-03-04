@@ -17,6 +17,10 @@
 		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
 		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
 		C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */; };
+		C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */; };
+		C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */; };
+		C2A0AD751E6B1A6900E42146 /* TextAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */; };
+		C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */; };
 		E58AEC432CB150A3CB70981B /* Pods_KAPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuLoader.swift; sourceTree = "<group>"; };
+		C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKapuTableVC.swift; sourceTree = "<group>"; };
+		C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAreaTableViewCell.swift; sourceTree = "<group>"; };
+		C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5709B9FA3C57D530CB95945 /* Pods-KAPU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAPU.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAPU/Pods-KAPU.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +93,8 @@
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
 				C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */,
+				C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */,
+				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
 				3DC0219B1E6AB61A0061FD74 /* Resources */,
 			);
 			path = KAPU;
@@ -94,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				3DC021881E6AB5050061FD74 /* Main.storyboard */,
+				C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */,
+				C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */,
 				3DC0218E1E6AB5050061FD74 /* Assets.xcassets */,
 				3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */,
 				3DC021931E6AB5050061FD74 /* Info.plist */,
@@ -236,10 +248,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A0AD751E6B1A6900E42146 /* TextAreaTableViewCell.swift in Sources */,
 				9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */,
 				9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */,
+				C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */,
+				C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */,
 				3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */,
 				3DC021871E6AB5050061FD74 /* LoginVC.swift in Sources */,
+				C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */,
 				3DC021851E6AB5050061FD74 /* AppDelegate.swift in Sources */,
 				C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */,
 			);
