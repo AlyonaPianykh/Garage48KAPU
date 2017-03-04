@@ -421,11 +421,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gqm-4P-lcF">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="RsR-am-RqS">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bmu-cV-7j9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="sES-eq-ddG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2c-s0-NSE">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postKapu:" destination="dKl-y6-gos" eventType="touchUpInside" id="WxL-6U-oYN"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

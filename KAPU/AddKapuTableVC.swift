@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import FirebaseDatabase
+
+
 
 class AddKapuVC: UIViewController {
     
     @IBOutlet var table: UITableView!
     var numberOfOptions = 3
+    let kapusLoader = KapuLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +27,51 @@ class AddKapuVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func postKapu(_ sender: Any) {
+        let titleTextFieldCell = self.table.cellForRow(at: IndexPath(row: 0, section: 0)) as? TextFieldTableViewCell
+        let textAreaCell = self.table.cellForRow(at: IndexPath(row: 0, section: 1)) as? TextFieldTableViewCell
+       
+        let title = titleTextFieldCell?.textField.text ?? "defaultTitle"
+        let description = textAreaCell?.textField.text ?? "defaultDescription"
+       
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd yyyy, hh:mm"
+        let currentDate = Date()
 
+        let convertedDateString = dateFormatter.string(from: currentDate)
+        let options = self.getOptions()
+        
+        let user = FIRAuth.auth()?.currentUser
+        let userName = FIRAuth.auth()?.currentUser?.displayName
+        let kapu = Kapu(title: title,
+                        body: description,
+                        categoryName: "Transportation",
+                        creationDate: convertedDateString,
+                        creatorName: userName ?? "defaultUsername",
+                        location: [
+            "city": "Lviv, Lvivska oblast",
+            "street": "Storojenka, 32"],
+                        options: [:])
+        kapusLoader.addNew(kapu: kapu, options: options)
+        
+    }
+
+    func getOptions() -> [String] {
+        let rowsCount = self.table.numberOfRows(inSection: 2)
+        var options: [String] = []
+        
+        for i in 0..<rowsCount-1  {
+            let cell = self.table.cellForRow(at: IndexPath(row: i, section: 2)) as! TextFieldTableViewCell
+            
+            if cell.textField.text != nil && cell.textField.text != "" {
+                let optionName = cell.textField.text!
+                   options.append(optionName)
+            }
+        
+        }
+        
+        return options
+    }
     
 }
 

@@ -11,10 +11,6 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
-
-
-
-
 class LoginVC: UIViewController {
     var databaseRef: FIRDatabaseReference!
     
@@ -63,6 +59,12 @@ class LoginVC: UIViewController {
     private func login() {
         if let providerData = FIRAuth.auth()?.currentUser?.providerData {
                 print("user is signed in")
+            
+            /*let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
+            changeRequest?.displayName = "Jane Q. User"
+            changeRequest?.commitChanges() { (error) in
+                print("name changed")
+            }*/
         } else {
             
         FIRAuth.auth()?.signIn(withEmail: "test@test.com", password: "qwerty") { (user, error) in
@@ -77,6 +79,8 @@ class LoginVC: UIViewController {
                 if let loader = self.loader {
                     loader.addNew(kapu: kapu)
                 }*/
+            
+                
                 
             } else {
                 

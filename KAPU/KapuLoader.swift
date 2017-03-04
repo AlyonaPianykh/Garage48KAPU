@@ -20,13 +20,23 @@ class Kapu {
     let creatorName: String
     let creationDate: String
     let title: String
+    let location: NSDictionary
+    let options: NSDictionary
     
-    init(title: String, body: String, categoryName: String, creationDate: String, creatorName: String) {
+    init(title: String,
+         body: String,
+         categoryName: String,
+         creationDate: String,
+         creatorName: String,
+         location: NSDictionary,
+         options: NSDictionary) {
         self.title = title
         self.body = body
         self.creatorName = creatorName
         self.creationDate = creationDate
         self.categoryName = categoryName
+        self.location = location
+        self.options = options
     }
 }
 
@@ -60,7 +70,9 @@ class KapuLoader {
                                    body: kapu.value(forKey: "body") as! String,
                                    categoryName: kapu.value(forKey: "categoryName") as! String,
                                    creationDate: kapu.value(forKey: "creationDate") as! String,
-                                   creatorName: kapu.value(forKey: "creatorName") as! String)
+                                   creatorName: kapu.value(forKey: "creatorName") as! String,
+                                   location: kapu.value(forKey: "location") as! NSDictionary,
+                                   options: kapu.value(forKey: "options") as! NSDictionary)
                 self.allKapus.append(newItem)
             }
         }
@@ -68,14 +80,24 @@ class KapuLoader {
         print("\(allKapus)")
     }
     
-    func addNew(kapu: Kapu) {
+    func addNew(kapu: Kapu, options: [String]) {
         let key = self.databaseRef.child(KAPUS).childByAutoId().key
         let post = ["title": kapu.title,
                     "body": kapu.body,
                     "categoryName": kapu.categoryName,
                     "creatorName": kapu.creatorName,
-                    "creationDate": kapu.creationDate]
+                    "creationDate": kapu.creationDate,
+                    "location": kapu.location] as [String : Any]
+        
         let childUpdates = ["/\(KAPUS)/\(key)": post]
         self.databaseRef.updateChildValues(childUpdates)
+        
+        
+        for option in kapu.options {
+            let keyOption = self.databaseRef.child(KAPUS).child("options").childByAutoId().key
+            let childUpdates = ["/\(KAPUS)/options/\(keyOption)/": option]
+            self.databaseRef.updateChildValues(childUpdates)
+        }
+        
     }
 }
