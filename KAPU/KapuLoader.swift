@@ -14,7 +14,6 @@ import FirebaseDatabase
 let KAPUS: String = "requests"
 let USERS: String = "users"
 
-
 class Kapu {
     let body: String
     let categoryName: String
@@ -37,13 +36,14 @@ class KapuLoader {
     
     init() {
         self.databaseRef = FIRDatabase.database().reference()
-        self.getKapusFromFB()
+        //self.getKapusFromFB()
     }
     
-    private func getKapusFromFB() {
+    func getKapusFromFB(compleation:@escaping ()->()) {
         self.databaseRef.child(KAPUS).observeSingleEvent(of: .value, with: { (snapshot) in
             if let kapus = snapshot.value as? NSDictionary {
                 self.parseAllKapus(kapus: kapus)
+                compleation()
             }
         }) { (error) in
             print(error.localizedDescription)
