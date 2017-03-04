@@ -11,8 +11,6 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
-
-
 enum State {
     case table
     case filter
@@ -26,6 +24,10 @@ class AddKapuVC: UIViewController {
     @IBOutlet var table: UITableView!
     var numberOfOptions = 3
     let kapusLoader = KapuLoader()
+    var state:State = .table
+    @IBOutlet weak var filterTable: UITableView!
+    @IBOutlet weak var filterBackgroundView: UIView!
+    var selectedFilter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,50 +37,15 @@ class AddKapuVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func postKapu(_ sender: Any) {
-        let titleTextFieldCell = self.table.cellForRow(at: IndexPath(row: 0, section: 0)) as? TextFieldTableViewCell
-        let textAreaCell = self.table.cellForRow(at: IndexPath(row: 0, section: 1)) as? TextAreaTableViewCell
-       
-        let title = titleTextFieldCell?.textField.text ?? "defaultTitle"
-        let description = textAreaCell?.textField.text ?? "defaultDescription"
-       
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM dd yyyy, hh:mm"
-        let currentDate = Date()
-
-        let convertedDateString = dateFormatter.string(from: currentDate)
-        let options = self.getOptions()
-        
-        let user = FIRAuth.auth()?.currentUser
-        let userName = FIRAuth.auth()?.currentUser?.displayName
-        let kapu = Kapu(title: title,
-                        body: description,
-                        categoryName: "Transportation",
-                        creationDate: convertedDateString,
-                        creatorName: userName ?? "defaultUsername",
-                        location: [
-            "city": "Lviv, Lvivska oblast",
-            "street": "Storojenka, 32"],
-                        options: [:])
-        kapusLoader.addNew(kapu: kapu, options: options)
-        
+    func openFilter(){
+        state = .filter
+        filterBackgroundView.isHidden = false
+        view.bringSubview(toFront: filterBackgroundView)
     }
-
-    func getOptions() -> [String] {
-        let rowsCount = self.table.numberOfRows(inSection: 2)
-        var options: [String] = []
-        
-        for i in 0..<rowsCount-1  {
-            let cell = self.table.cellForRow(at: IndexPath(row: i, section: 2)) as! TextFieldTableViewCell
-            
-            if cell.textField.text != nil && cell.textField.text != "" {
-                let optionName = cell.textField.text!
-                   options.append(optionName)
-            }
-        
-        }
-        
-        return options
+    
+    func closeFilter(){
+        state = .table
+        filterBackgroundView.isHidden = true
     }
     
     @IBAction func close(_ sender: Any) {
@@ -96,7 +63,62 @@ class AddKapuVC: UIViewController {
         default: break
         }
     }
-
+    @IBAction func saveKapu(_ sender: Any) {
+        let titleTextFieldCell = self.table.cellForRow(at: IndexPath(row: 0, section: 0)) as? TextFieldTableViewCell
+        let textAreaCell = self.table.cellForRow(at: IndexPath(row: 0, section: 1)) as? TextAreaTableViewCell
+        
+        let title = titleTextFieldCell?.textField.text ?? "defaultTitle"
+        let description = textAreaCell?.textField.text ?? "defaultDescription"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd yyyy, hh:mm"
+        let currentDate = Date()
+        
+        let convertedDateString = dateFormatter.string(from: currentDate)
+        let options = self.getOptions()
+        
+        let userName = FIRAuth.auth()?.currentUser?.displayName
+        let kapu = Kapu(title: title,
+                        body: description,
+                        categoryName: self.getCategoryName(),
+                        creationDate: convertedDateString,
+                        creatorName: userName ?? "defaultUsername",
+                        location: [
+                            "city": "Lviv, Lvivska oblast",
+                            "street": "Storojenka, 32"],
+                        options: [:])
+        kapusLoader.addNew(kapu: kapu, options: options)
+    }
+ 
+    func getCategoryName() -> String {
+        switch selectedFilter {
+        case 0:
+            return "Infrastructure"
+        case 1:
+            return "Transportation"
+        case 2:
+            return "Decision Making"
+        default: return "Infrastructure"
+        }
+    }
+    
+    func getOptions() -> [String] {
+        let rowsCount = self.table.numberOfRows(inSection: 2)
+        var options: [String] = []
+        
+        for i in 0..<rowsCount-1  {
+            let cell = self.table.cellForRow(at: IndexPath(row: i, section: 2)) as! TextFieldTableViewCell
+            
+            if cell.textField.text != nil && cell.textField.text != "" {
+                let optionName = cell.textField.text!
+                   options.append(optionName)
+            }
+        
+        }
+        
+        return options
+    }
+    
 }
 
 extension AddKapuVC: UITableViewDelegate{
@@ -113,9 +135,12 @@ extension AddKapuVC: UITableViewDelegate{
             selectedFilter = indexPath.row
             titleButton.setTitle(filterCellNames[selectedFilter], for: .normal)
             filterTable.reloadData()
+            closeFilter()
         } else {
-            numberOfOptions += 1
-            self.table.reloadData()
+            if (indexPath.section == 2 && indexPath.row == numberOfOptions - 1) {
+                numberOfOptions += 1
+                self.table.reloadData()
+            }
         }
     }
     
@@ -201,14 +226,6 @@ extension AddKapuVC: UITableViewDataSource{
         }
         return cell!
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if (indexPath.section == 2 && indexPath.row == numberOfOptions - 1) {
-            numberOfOptions += 1
-            self.table.reloadData()
-        }
-       
-    }
+   
     
 }

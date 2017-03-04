@@ -500,13 +500,26 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gqm-4P-lcF">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="sES-eq-ddG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2c-s0-NSE">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7wF-8K-0fI">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Infastructure">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="openMenu:" destination="dKl-y6-gos" eventType="touchUpInside" id="765-Ce-SMT"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="RsR-am-RqS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bmu-cV-7j9">
+                                <rect key="frame" x="294" y="7" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="postKapu:" destination="dKl-y6-gos" eventType="touchUpInside" id="WxL-6U-oYN"/>
+                                    <action selector="saveKapu:" destination="dKl-y6-gos" eventType="touchUpInside" id="aDE-U1-EO0"/>
                                 </connections>
                             </button>
                         </barButtonItem>
