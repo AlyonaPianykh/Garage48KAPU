@@ -22,7 +22,6 @@
 		492169291E6B6E3100526A76 /* KapuCheckboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492169281E6B6E3100526A76 /* KapuCheckboxCell.swift */; };
 		9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */; };
 		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
-		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
 		C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */; };
 		C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */; };
 		C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */; };
@@ -30,6 +29,7 @@
 		C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */; };
 		C2A0AD7B1E6C1D6B00E42146 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD7A1E6C1D6B00E42146 /* PushManager.swift */; };
 		C2A0AD7D1E6C1D8E00E42146 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD7C1E6C1D8E00E42146 /* FilterTableViewCell.swift */; };
+		C2A0AD7F1E6C48D100E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD7E1E6C48D100E42146 /* GoogleService-Info.plist */; };
 		E58AEC432CB150A3CB70981B /* Pods_KAPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +52,6 @@
 		492169281E6B6E3100526A76 /* KapuCheckboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuCheckboxCell.swift; sourceTree = "<group>"; };
 		9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
-		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuLoader.swift; sourceTree = "<group>"; };
 		C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKapuTableVC.swift; sourceTree = "<group>"; };
 		C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD7A1E6C1D6B00E42146 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 		C2A0AD7C1E6C1D8E00E42146 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		C2A0AD7E1E6C48D100E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5709B9FA3C57D530CB95945 /* Pods-KAPU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAPU.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAPU/Pods-KAPU.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,13 +125,13 @@
 			isa = PBXGroup;
 			children = (
 				3DC021881E6AB5050061FD74 /* Main.storyboard */,
+				C2A0AD7E1E6C48D100E42146 /* GoogleService-Info.plist */,
 				C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */,
 				C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */,
 				3DC0218E1E6AB5050061FD74 /* Assets.xcassets */,
 				3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */,
 				3DC021931E6AB5050061FD74 /* Info.plist */,
 				3DC0218B1E6AB5050061FD74 /* KAPU.xcdatamodeld */,
-				C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -201,8 +201,8 @@
 				TargetAttributes = {
 					3DC021801E6AB5050061FD74 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = PZPU8LYSXX;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 7LHZN6LW9B;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC021921E6AB5050061FD74 /* LaunchScreen.storyboard in Resources */,
-				C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */,
+				C2A0AD7F1E6C48D100E42146 /* GoogleService-Info.plist in Resources */,
 				3DC0218F1E6AB5050061FD74 /* Assets.xcassets in Resources */,
 				3DC0218A1E6AB5050061FD74 /* Main.storyboard in Resources */,
 			);
@@ -432,11 +432,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PZPU8LYSXX;
+				DEVELOPMENT_TEAM = 7LHZN6LW9B;
 				INFOPLIST_FILE = KAPU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.demoapp.garage48.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.garage48.distribution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "abf1ad14-dd34-4c03-b582-602b565fed89";
+				PROVISIONING_PROFILE_SPECIFIER = "KAPU Distr Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -447,10 +449,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PZPU8LYSXX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KAPU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.demoapp.garage48.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kapu.garage48.distribution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
