@@ -56,6 +56,7 @@ class LoginVC: UIViewController {
             self.login()
     }
     
+    
     private func login() {
         if let providerData = FIRAuth.auth()?.currentUser?.providerData {
                 print("user is signed in")

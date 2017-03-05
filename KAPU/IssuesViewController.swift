@@ -15,30 +15,32 @@ class IssuesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpNotificationCenter()
         kapus.getKapusFromFB{
             self.table.reloadData()
         }
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        kapus.getKapusFromFB {
+            self.table.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setUpNotificationCenter() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(IssuesViewController.updateKapus),
+                                               name: NSNotification.Name(rawValue: "KapusWereUpdated"),
+                                               object:nil)
     }
-    */
+    
+    func updateKapus() {
+        self.table.reloadData()
+    }
 
 }
 
@@ -62,7 +64,7 @@ extension IssuesViewController :UITableViewDataSource{
         cell.issueDescriptionLabel.text = kapu.title
         cell.authorLabel.text = kapu.creatorName
         cell.dateLabel.text = kapu.creationDate
-
+        cell.issuePicture.image = kapu.image
         return cell
     }
     

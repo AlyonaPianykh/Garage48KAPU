@@ -9,10 +9,10 @@
 import UIKit
 
 class ButtonTableViewCell: UITableViewCell {
-    @IBOutlet weak var buttonAdd: UIButton!
+    
+   @IBOutlet weak var buttonLabel: UILabel!
 
-    @IBOutlet weak var onAddClicked: UIButton!
-    override func awakeFromNib() {
+   override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

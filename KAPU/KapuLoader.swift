@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseCore
 import FirebaseAuth
+import FirebaseStorage
 import FirebaseDatabase
 
 let KAPUS: String = "requests"
@@ -22,6 +23,7 @@ class Kapu {
     let title: String
     let location: NSDictionary
     let options: NSDictionary
+    var image: UIImage?
     
     init(title: String,
          body: String,
@@ -29,7 +31,8 @@ class Kapu {
          creationDate: String,
          creatorName: String,
          location: NSDictionary,
-         options: NSDictionary) {
+         options: NSDictionary,
+         image: UIImage?) {
         self.title = title
         self.body = body
         self.creatorName = creatorName
@@ -37,6 +40,7 @@ class Kapu {
         self.categoryName = categoryName
         self.location = location
         self.options = options
+        self.image = image
     }
 }
 
@@ -62,7 +66,7 @@ class KapuLoader {
     
     private func parseAllKapus(kapus: NSDictionary) {
         self.allKapus = []
-        
+        var i: Int = 0
         let allKeys = kapus.allKeys
         for key in allKeys {
             if let kapu = kapus[key] as! NSDictionary? {
@@ -72,12 +76,62 @@ class KapuLoader {
                                    creationDate: kapu.value(forKey: "creationDate") as! String,
                                    creatorName: kapu.value(forKey: "creatorName") as! String,
                                    location: kapu.value(forKey: "location") as! NSDictionary,
-                                   options: kapu.value(forKey: "options") as! NSDictionary)
+                                   options: kapu.value(forKey: "options") as! NSDictionary,
+                                   image: nil)
+               
+                if let imageName = kapu.value(forKey: "image") {
+                    let currentIndex = i
+                    getImageFromFB(name: imageName as! String, index: currentIndex) {(imagePath, index) in
+                        self.allKapus[index].image = imagePath
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "KapusWereUpdated"), object: nil)
+                        print("notfication update")
+                    }
+                }
                 self.allKapus.append(newItem)
+                i+=1
             }
+           
         }
         
         print("\(allKapus)")
+    }
+    
+    func getImageFromFB(name: String, index: Int, completion:@escaping (_ imagePath: UIImage, _ index: Int)->()) {
+        let storage = FIRStorage.storage()
+        let storageRef = storage.reference()
+        let islandRef = storageRef.child("\(name)")
+        
+        islandRef.data(withMaxSize: 1 * 2048 * 2048) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+                completion(image!, index)
+            }
+        }
+        
+    }
+    
+    func uploadImageToFB(imageData: Data, imageName: String, completion:@escaping (_ imageName: String)->()) {
+        let storage = FIRStorage.storage()
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images/\(imageName)")
+        let uploadMetaData = FIRStorageMetadata()
+        uploadMetaData.contentType = "image/jpeg"
+        imagesRef.put(imageData, metadata: uploadMetaData) { (metadata, error) in
+            if (error != nil) {
+                print("Receiving unsuccessful \(error?.localizedDescription)")
+            } else {
+                guard let name = metadata?.path else {
+                    return
+                }
+                completion(name)
+                print("Upload complete! \(metadata)")
+            }
+        }
+        
     }
     
     func addNew(kapu: Kapu, options: [String]) {
@@ -88,6 +142,15 @@ class KapuLoader {
                     "creatorName": kapu.creatorName,
                     "creationDate": kapu.creationDate,
                     "location": kapu.location] as [String : Any]
+
+        
+        if let originalImage = kapu.image,
+            let imageData = UIImageJPEGRepresentation(originalImage, 0.8) {
+            uploadImageToFB(imageData: imageData, imageName: self.randomString(length: 14)){ (imageName) in
+                let childUpdates = ["/\(KAPUS)/\(key)/image/": imageName]
+                self.databaseRef.updateChildValues(childUpdates)
+            }
+        }
         
         let childUpdates = ["/\(KAPUS)/\(key)": post]
         self.databaseRef.updateChildValues(childUpdates)
@@ -98,5 +161,20 @@ class KapuLoader {
             self.databaseRef.updateChildValues(childUpdates)
         }
         
+    }
+    
+    func randomString(length: Int) -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+    
+        var randomString = ""
+    
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+    
+        return randomString
     }
 }

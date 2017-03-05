@@ -91,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				9BBC7AA51E6B41CB00A63AB5 /* TableViewCells */,
-				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
 				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
@@ -119,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */,
+				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
 				C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */,
 				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
 				9BBC7AA61E6B41F700A63AB5 /* FilterTableViewCell.swift */,

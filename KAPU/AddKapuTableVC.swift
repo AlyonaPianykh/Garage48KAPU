@@ -9,7 +9,10 @@
 import UIKit
 import FirebaseCore
 import FirebaseAuth
+import FirebaseStorage
 import FirebaseDatabase
+import MobileCoreServices
+
 
 enum State {
     case table
@@ -18,7 +21,7 @@ enum State {
 
 let filterCellNames = ["Infrastructure", "Transportation", "Decision Making"]
 
-class AddKapuVC: UIViewController {
+class AddKapuVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var titleButton: UIButton!
     @IBOutlet var table: UITableView!
@@ -28,6 +31,8 @@ class AddKapuVC: UIViewController {
     @IBOutlet weak var filterTable: UITableView!
     @IBOutlet weak var filterBackgroundView: UIView!
     var selectedFilter = 0
+    
+    var imageToSave: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +91,8 @@ class AddKapuVC: UIViewController {
                         location: [
                             "city": "Lviv, Lvivska oblast",
                             "street": "Storojenka, 32"],
-                        options: [:])
+                        options: [:],
+                        image: imageToSave)
         kapusLoader.addNew(kapu: kapu, options: options)
     }
  
@@ -119,12 +125,37 @@ class AddKapuVC: UIViewController {
         return options
     }
     
+    func uploadButtonWasPressed() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = [kUTTypeImage as String]
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let mediaType: String = info[UIImagePickerControllerMediaType] as? String else {
+            dismiss(animated: true, completion: nil)
+            return
+        }
+        if mediaType == (kUTTypeImage as String) {
+            if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                self.imageToSave = originalImage
+            }
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AddKapuVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0, 2:
+        case 0, 2, 3:
             return 44
         default: return 170
         }
@@ -141,6 +172,9 @@ extension AddKapuVC: UITableViewDelegate{
                 numberOfOptions += 1
                 self.table.reloadData()
             }
+            if (indexPath.section == 3 && indexPath.row == 0) {
+                self.uploadButtonWasPressed()
+            }
         }
     }
     
@@ -153,7 +187,7 @@ extension AddKapuVC: UITableViewDataSource{
             return 3
         }
         switch section {
-        case 0, 1:
+        case 0, 1, 3:
             return 1
         default: return numberOfOptions
         }
@@ -166,7 +200,7 @@ extension AddKapuVC: UITableViewDataSource{
         if (tableView == self.filterTable) {
             return 1
         }
-        return 3
+        return 4
     }
     
     
@@ -181,12 +215,14 @@ extension AddKapuVC: UITableViewDataSource{
             return "Description (optional)"
         case 2:
             return "Answer options"
+        case 3:
+            return "Photo Upload"
          default:  return ""
         }
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        var cell: UITableViewCell?
+        
         if (tableView == self.filterTable) {
             let filterCell = tableView.dequeueReusableCell(withIdentifier: "FilterCell", for: indexPath) as! FilterTableViewCell
             filterCell.categoryName.text = filterCellNames[indexPath.row]
@@ -199,33 +235,37 @@ extension AddKapuVC: UITableViewDataSource{
             }
             return filterCell
         }
+    var cell: UITableViewCell?
         switch(indexPath.section) {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: "textFieldCell", for: indexPath) as! TextFieldTableViewCell
-            
-            cell?.placeholderText = "Ask a question"
+            cell?.textLabel?.placeholderText = "Ask a question"
             break
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "textAreaCell", for: indexPath) as! TextAreaTableViewCell
-            cell?.placeholderText = "Describe the purpose youe Kapu"
+            cell?.textLabel?.placeholderText = "Describe the purpose youe Kapu"
             break
         case 2:
             switch indexPath.row {
             case 0..<numberOfOptions - 1:
                     cell = tableView.dequeueReusableCell(withIdentifier: "textFieldCell", for: indexPath) as! TextFieldTableViewCell
-                    
-                    cell?.placeholderText = "Option \(indexPath.row)"
+                    cell?.textLabel?.placeholderText = "Option \(indexPath.row)"
                 break
             case numberOfOptions - 1:
-                cell = tableView.dequeueReusableCell(withIdentifier: "buttonTableViewCell", for: indexPath) as! ButtonTableViewCell
-                break
-                
+                let buttoncell = tableView.dequeueReusableCell(withIdentifier: "buttonTableViewCell", for: indexPath) as! ButtonTableViewCell
+                buttoncell.buttonLabel.text = "Add Option"
+                return buttoncell
             default: break
             }
+        case 3:
+            let photocell = tableView.dequeueReusableCell(withIdentifier: "buttonTableViewCell", for: indexPath) as! ButtonTableViewCell
+            photocell.buttonLabel?.text = "Attach Photo"
+            return photocell
         default: break
         }
+        
         return cell!
     }
-   
+
     
 }

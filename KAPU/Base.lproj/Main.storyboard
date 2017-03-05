@@ -478,6 +478,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Iyl-Al-Kcp" secondAttribute="bottom" constant="3" id="t9b-4H-hkB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonLabel" destination="Iyl-Al-Kcp" id="xhR-ip-ukw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
