@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>837711682004-02jr6ogba6fov8tor7nm88gdrtvgfauc.apps.googleusercontent.com</string>
+	<string>504082343144-pmi5b32enohfnot919s43hkip03gugv7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.837711682004-02jr6ogba6fov8tor7nm88gdrtvgfauc</string>
+	<string>com.googleusercontent.apps.504082343144-pmi5b32enohfnot919s43hkip03gugv7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBIX2eMGCFxStVta40rHVD466SCIwLQHZw</string>
+	<string>AIzaSyAZ7a7FGUjQEvAuSgJ4NxVQb14oUujZk5k</string>
 	<key>GCM_SENDER_ID</key>
-	<string>837711682004</string>
+	<string>504082343144</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kapu.demoapp.garage48.test</string>
+	<string>com.kapu.garage48.demoapp</string>
 	<key>PROJECT_ID</key>
-	<string>kapu-19c80</string>
+	<string>kapumessaging</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kapu-19c80.appspot.com</string>
+	<string>kapumessaging.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:837711682004:ios:70bf9c02415b33a7</string>
+	<string>1:504082343144:ios:cc459f51735855c8</string>
 	<key>DATABASE_URL</key>
-	<string>https://kapu-19c80.firebaseio.com</string>
+	<string>https://kapumessaging.firebaseio.com</string>
 </dict>
 </plist>

@@ -10,10 +10,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
-
-
-
-
+import FirebaseMessaging
 
 class LoginVC: UIViewController {
     var databaseRef: FIRDatabaseReference!
@@ -69,6 +66,11 @@ class LoginVC: UIViewController {
             
             if error == nil {
                 print("You have successfully logged in")
+                
+                PushManager.shared.subscribeToAllFeeds()
+                
+                FIRMessaging.messaging().subscribe(toTopic: "topics/app")
+                
               /*  let kapu = Kapu(title: "Peace On Earth A Wonderful Wish But No Way?",
                                 body: "The following article covers a topic that has recently moved to center stage–at least it seems that way. If you’ve been thinking you need to know more about unconditional love, here’s your",
                                 categoryName: "Transportation",
@@ -79,6 +81,8 @@ class LoginVC: UIViewController {
                 }*/
                 
             } else {
+                
+                PushManager.shared.subscribeToAllFeeds()
                 
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 
