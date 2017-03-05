@@ -84,13 +84,18 @@ class KapuCheckboxTableViewController: UITableViewController {
         voteIsPressed = true
         self.tableView.frame = CGRect.init(x: self.tableView.frame.origin.x, y: self.tableView.frame.origin.x, width: self.tableView.frame.width, height: self.tableView.frame.height - 70.0)
         
-        let selectedIndexPath = tableView.indexPathForSelectedRow
-        let selectedCell: KapuCheckboxCell = tableView.cellForRow(at: selectedIndexPath!) as! KapuCheckboxCell
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            let selectedCell: KapuCheckboxCell = tableView.cellForRow(at: selectedIndexPath) as! KapuCheckboxCell
+            self.tableView.reloadData()
+            self.tableView.selectRow(at: selectedIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
+            kapuViewController.changeCheckboxTableViewHeight()
+            self.tableView.reloadData()
+            let result = selectedCell.optionLabel.text! as String
+            self.updateKapu(option: result)
+            return result
+        }
         
-        self.tableView.reloadData()
-        let result = selectedCell.optionLabel.text! as String
-        self.updateKapu(option: result)
-        return result
+        return ""
     }
     
     func updateKapu(option: String) {
