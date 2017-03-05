@@ -28,6 +28,8 @@
 		C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */; };
 		C2A0AD751E6B1A6900E42146 /* TextAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */; };
 		C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */; };
+		C2A0AD7B1E6C1D6B00E42146 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD7A1E6C1D6B00E42146 /* PushManager.swift */; };
+		C2A0AD7D1E6C1D8E00E42146 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0AD7C1E6C1D8E00E42146 /* FilterTableViewCell.swift */; };
 		E58AEC432CB150A3CB70981B /* Pods_KAPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAreaTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		C2A0AD7A1E6C1D6B00E42146 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+		C2A0AD7C1E6C1D8E00E42146 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		C707A6B4BC2B1E8D37A76E93 /* Pods_KAPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5709B9FA3C57D530CB95945 /* Pods-KAPU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAPU.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAPU/Pods-KAPU.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +110,9 @@
 				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
 				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
+				C2A0AD7C1E6C1D8E00E42146 /* FilterTableViewCell.swift */,
 				3DC021861E6AB5050061FD74 /* LoginVC.swift */,
+				C2A0AD7A1E6C1D6B00E42146 /* PushManager.swift */,
 				C2A0AD6E1E6AF07400E42146 /* KapuLoader.swift */,
 				C2A0AD701E6B114A00E42146 /* AddKapuTableVC.swift */,
 				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
@@ -292,6 +298,7 @@
 				492169251E6B6DF300526A76 /* KapuAddressCell.swift in Sources */,
 				C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */,
 				492169201E6B6CB900526A76 /* KapuCheckboxTableViewController.swift in Sources */,
+				C2A0AD7D1E6C1D8E00E42146 /* FilterTableViewCell.swift in Sources */,
 				C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */,
 				3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */,
 				492169271E6B6E1800526A76 /* KapuDescriptionCell.swift in Sources */,
@@ -300,6 +307,7 @@
 				4921691E1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift in Sources */,
 				3DC021871E6AB5050061FD74 /* LoginVC.swift in Sources */,
 				C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */,
+				C2A0AD7B1E6C1D6B00E42146 /* PushManager.swift in Sources */,
 				3DC021851E6AB5050061FD74 /* AppDelegate.swift in Sources */,
 				C2A0AD6F1E6AF07400E42146 /* KapuLoader.swift in Sources */,
 			);

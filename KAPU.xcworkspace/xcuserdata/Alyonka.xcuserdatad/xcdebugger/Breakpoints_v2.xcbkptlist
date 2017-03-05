@@ -509,6 +509,38 @@
             endingLineNumber = "149"
             landmarkName = "addNew(kapu:options:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KAPU.KapuLoader.addNew (kapu : KAPU.Kapu, options : Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "KAPU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Alyonka/Documents/Garage48KAPU/KAPU/KapuLoader.swift"
+                  timestampString = "510401983.732628"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "1709">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KAPU.KapuLoader.(addNew (kapu : KAPU.Kapu, options : Swift.Array&lt;Swift.String&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "KAPU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Alyonka/Documents/Garage48KAPU/KAPU/KapuLoader.swift"
+                  timestampString = "510401983.734805"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -541,6 +573,38 @@
             endingLineNumber = "84"
             landmarkName = "parseAllKapus(kapus:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KAPU.KapuLoader.(parseAllKapus in _09730BB60BC0E33058F43EB3D5C31B07) (kapus : __ObjC.NSDictionary) -&gt; ()"
+                  moduleName = "KAPU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Alyonka/Documents/Garage48KAPU/KAPU/KapuLoader.swift"
+                  timestampString = "510401983.739163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "5730">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KAPU.KapuLoader.((parseAllKapus in _09730BB60BC0E33058F43EB3D5C31B07) (kapus : __ObjC.NSDictionary) -&gt; ()).(closure #1)"
+                  moduleName = "KAPU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Alyonka/Documents/Garage48KAPU/KAPU/KapuLoader.swift"
+                  timestampString = "510401983.741973"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
