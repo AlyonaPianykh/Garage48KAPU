@@ -15,8 +15,11 @@ class KapuViewController: UIViewController {
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var kapuCheckboxContainerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var chartToCheckboxTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var chartContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUILabels()
@@ -38,9 +41,16 @@ class KapuViewController: UIViewController {
         self.dateLabel.text = kapu.creationDate
     }
 
+    func changeCheckboxTableViewHeight() {
+        chartContainerView.frame = CGRect.init(x: chartContainerView.frame.origin.x, y: chartContainerView.frame.origin.y, width: chartContainerView.frame.width, height: chartContainerView.frame.height - 70)
+
+        kapuCheckboxContainerHeightConstraint.constant -= 70
+        chartToCheckboxTopConstraint.constant = 5
+                self.view.layoutIfNeeded()
+        self.view.setNeedsLayout()
+    }
  
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier, let kapu = self.kapu {
             switch identifier {
             case "kapuChart":
@@ -50,6 +60,7 @@ class KapuViewController: UIViewController {
             case "kapuSelectChoice":
                 let childViewController = segue.destination as! KapuCheckboxTableViewController
                 childViewController.kapu = kapu
+                childViewController.kapuViewController = self
                 break
             case "kapuDescription":
                 let childViewController = segue.destination as! KapuDescriptionTableViewController
