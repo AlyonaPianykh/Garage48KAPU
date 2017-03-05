@@ -13,6 +13,13 @@
 		3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0218B1E6AB5050061FD74 /* KAPU.xcdatamodeld */; };
 		3DC0218F1E6AB5050061FD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC0218E1E6AB5050061FD74 /* Assets.xcassets */; };
 		3DC021921E6AB5050061FD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC021901E6AB5050061FD74 /* LaunchScreen.storyboard */; };
+		4921691A1E6B6C0500526A76 /* KapuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492169191E6B6C0500526A76 /* KapuViewController.swift */; };
+		4921691E1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4921691D1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift */; };
+		492169201E6B6CB900526A76 /* KapuCheckboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4921691F1E6B6CB900526A76 /* KapuCheckboxTableViewController.swift */; };
+		492169221E6B6CD400526A76 /* KapuChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492169211E6B6CD400526A76 /* KapuChartViewController.swift */; };
+		492169251E6B6DF300526A76 /* KapuAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492169241E6B6DF300526A76 /* KapuAddressCell.swift */; };
+		492169271E6B6E1800526A76 /* KapuDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492169261E6B6E1800526A76 /* KapuDescriptionCell.swift */; };
+		492169291E6B6E3100526A76 /* KapuCheckboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492169281E6B6E3100526A76 /* KapuCheckboxCell.swift */; };
 		9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */; };
 		9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */; };
 		C2A0AD6B1E6AD02300E42146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */; };
@@ -34,6 +41,13 @@
 		3DC0218E1E6AB5050061FD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DC021911E6AB5050061FD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC021931E6AB5050061FD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		492169191E6B6C0500526A76 /* KapuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuViewController.swift; sourceTree = "<group>"; };
+		4921691D1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuDescriptionTableViewController.swift; sourceTree = "<group>"; };
+		4921691F1E6B6CB900526A76 /* KapuCheckboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuCheckboxTableViewController.swift; sourceTree = "<group>"; };
+		492169211E6B6CD400526A76 /* KapuChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuChartViewController.swift; sourceTree = "<group>"; };
+		492169241E6B6DF300526A76 /* KapuAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuAddressCell.swift; sourceTree = "<group>"; };
+		492169261E6B6E1800526A76 /* KapuDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuDescriptionCell.swift; sourceTree = "<group>"; };
+		492169281E6B6E3100526A76 /* KapuCheckboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KapuCheckboxCell.swift; sourceTree = "<group>"; };
 		9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -88,6 +102,7 @@
 		3DC021831E6AB5050061FD74 /* KAPU */ = {
 			isa = PBXGroup;
 			children = (
+				492169231E6B6D3800526A76 /* SingleKapu */,
 				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
 				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
 				3DC021841E6AB5050061FD74 /* AppDelegate.swift */,
@@ -113,6 +128,28 @@
 				C2A0AD6A1E6AD02300E42146 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		492169231E6B6D3800526A76 /* SingleKapu */ = {
+			isa = PBXGroup;
+			children = (
+				492169191E6B6C0500526A76 /* KapuViewController.swift */,
+				4921691D1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift */,
+				4921691F1E6B6CB900526A76 /* KapuCheckboxTableViewController.swift */,
+				492169211E6B6CD400526A76 /* KapuChartViewController.swift */,
+				4921692A1E6B6E3500526A76 /* Cells */,
+			);
+			name = SingleKapu;
+			sourceTree = "<group>";
+		};
+		4921692A1E6B6E3500526A76 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				492169241E6B6DF300526A76 /* KapuAddressCell.swift */,
+				492169261E6B6E1800526A76 /* KapuDescriptionCell.swift */,
+				492169281E6B6E3100526A76 /* KapuCheckboxCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		E6B941F156186305915071FD /* Frameworks */ = {
@@ -250,10 +287,17 @@
 			files = (
 				C2A0AD751E6B1A6900E42146 /* TextAreaTableViewCell.swift in Sources */,
 				9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */,
+				492169221E6B6CD400526A76 /* KapuChartViewController.swift in Sources */,
 				9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */,
+				492169251E6B6DF300526A76 /* KapuAddressCell.swift in Sources */,
 				C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */,
+				492169201E6B6CB900526A76 /* KapuCheckboxTableViewController.swift in Sources */,
 				C2A0AD731E6B197700E42146 /* TextFieldTableViewCell.swift in Sources */,
 				3DC0218D1E6AB5050061FD74 /* KAPU.xcdatamodeld in Sources */,
+				492169271E6B6E1800526A76 /* KapuDescriptionCell.swift in Sources */,
+				492169291E6B6E3100526A76 /* KapuCheckboxCell.swift in Sources */,
+				4921691A1E6B6C0500526A76 /* KapuViewController.swift in Sources */,
+				4921691E1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift in Sources */,
 				3DC021871E6AB5050061FD74 /* LoginVC.swift in Sources */,
 				C2A0AD771E6B1AD600E42146 /* ButtonTableViewCell.swift in Sources */,
 				3DC021851E6AB5050061FD74 /* AppDelegate.swift in Sources */,
