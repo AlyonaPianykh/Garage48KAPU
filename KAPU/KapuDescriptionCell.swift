@@ -11,11 +11,11 @@ import UIKit
 class KapuDescriptionCell: UITableViewCell {
 
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.frame = CGRect.init(x: 0, y: 0, width: self.frame.width, height: 150.0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

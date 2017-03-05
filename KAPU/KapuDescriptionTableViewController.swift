@@ -29,9 +29,12 @@ class KapuDescriptionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 3
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.row == 1 ? 150 : 44
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell()
@@ -51,16 +54,27 @@ class KapuDescriptionTableViewController: UITableViewController {
             cell.cityLabel.text = city
             
         case 1 :
-        let cell = tableView.dequeueReusableCell(withIdentifier: "kapuDescriptionCell", for: indexPath) as! KapuDescriptionCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kapuDescriptionCell", for: indexPath) as! KapuDescriptionCell
+            
+            cell.descriptionTextView.text = description
         
-        cell.descriptionLabel.text = description
-             return cell
+            return cell
+            
+        case 2 :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kapuDiscussingCell", for: indexPath) as! KapuDiscussingCell
+            
+            cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.size.width, 0, 0)
+            return cell
+            
         default: return defaultCell
-        }
-       return defaultCell
     }
- 
+        
+        return defaultCell
+    }
+    
 }
+
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

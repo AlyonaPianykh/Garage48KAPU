@@ -253,7 +253,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="1042"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="403-zZ-ZEV" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="987"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1159"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to do with lot in 49th street?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfb-zJ-oyy">
                                                 <rect key="frame" x="8" y="36" width="359" height="20"/>
@@ -271,16 +271,16 @@
                                                 </constraints>
                                             </imageView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffm-kV-PmY">
-                                                <rect key="frame" x="8" y="393" width="359" height="245"/>
+                                                <rect key="frame" x="8" y="530" width="359" height="280"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="245" id="kNf-jt-YVy"/>
+                                                    <constraint firstAttribute="height" constant="280" id="kNf-jt-YVy"/>
                                                 </constraints>
                                                 <connections>
                                                     <segue destination="9kY-Du-Zfp" kind="embed" identifier="kapuSelectChoice" id="dF9-ya-K8B"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8Q-T4-rH4">
-                                                <rect key="frame" x="8" y="646" width="359" height="300"/>
+                                                <rect key="frame" x="8" y="818" width="359" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="rdR-Jm-gXX"/>
                                                 </constraints>
@@ -289,9 +289,9 @@
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzr-tL-oRL">
-                                                <rect key="frame" x="8" y="272" width="359" height="113"/>
+                                                <rect key="frame" x="8" y="272" width="359" height="250"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="113" id="UIt-rP-e6T"/>
+                                                    <constraint firstAttribute="height" constant="250" id="UIt-rP-e6T"/>
                                                 </constraints>
                                                 <connections>
                                                     <segue destination="vQN-OF-7Tx" kind="embed" identifier="kapuDescription" id="1fn-yH-Dcg"/>
@@ -381,7 +381,10 @@
                     <connections>
                         <outlet property="authorLabel" destination="s9f-lh-q9v" id="dR3-4W-G91"/>
                         <outlet property="categoryNameLabel" destination="x7t-fJ-KEc" id="lGv-ts-OKv"/>
+                        <outlet property="chartContainerView" destination="ffm-kV-PmY" id="3kY-vf-yVT"/>
+                        <outlet property="chartToCheckboxTopConstraint" destination="Gt6-IS-jYR" id="gUY-O6-aZf"/>
                         <outlet property="dateLabel" destination="gGQ-37-E8x" id="jMR-yH-62o"/>
+                        <outlet property="kapuCheckboxContainerHeightConstraint" destination="kNf-jt-YVy" id="9Ho-91-eFE"/>
                         <outlet property="titleLabel" destination="pfb-zJ-oyy" id="m26-K4-g4J"/>
                     </connections>
                 </viewController>
@@ -394,7 +397,7 @@
             <objects>
                 <tableViewController id="9kY-Du-Zfp" customClass="KapuCheckboxTableViewController" customModule="KAPU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uvG-rC-n3c">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="245"/>
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -448,14 +451,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6a-ew-1WD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4487" y="-229"/>
+            <point key="canvasLocation" x="4337" y="-230"/>
         </scene>
         <!--Kapu Description Table View Controller-->
         <scene sceneID="z3W-vL-9sg">
             <objects>
                 <tableViewController id="vQN-OF-7Tx" customClass="KapuDescriptionTableViewController" customModule="KAPU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="B2h-mJ-oo0">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -467,14 +470,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lviv, Lviv Oblast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1P-Q5-INu">
-                                            <rect key="frame" x="8" y="0.0" width="318" height="21"/>
+                                            <rect key="frame" x="13" y="0.0" width="318" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modesta Mentynskaha Street, 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rej-pw-TZj">
-                                            <rect key="frame" x="8" y="22" width="318" height="21"/>
+                                            <rect key="frame" x="13" y="22" width="318" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -487,26 +490,58 @@
                                     <outlet property="streetLabel" destination="rej-pw-TZj" id="3uB-ZR-aiy"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kapuDescriptionCell" rowHeight="76" id="stk-aa-zAj" customClass="KapuDescriptionCell" customModule="KAPU" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="73" width="359" height="76"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kapuDescriptionCell" rowHeight="109" id="stk-aa-zAj" customClass="KapuDescriptionCell" customModule="KAPU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="73" width="359" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stk-aa-zAj" id="7cm-IK-fPk">
-                                    <rect key="frame" x="0.0" y="0.0" width="359" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj7-PE-Xl0">
-                                            <rect key="frame" x="8" y="0.0" width="343" height="70"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="noC-QT-Frv">
+                                            <rect key="frame" x="8" y="0.0" width="351" height="108"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="108" id="oVx-jc-W0Q"/>
+                                            </constraints>
                                             <string key="text">The following article covers a topic that has recently moced to center stage-at least it seems that way. If you've been thinking you need to know more about unconditional love, here's your</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="noC-QT-Frv" firstAttribute="top" secondItem="7cm-IK-fPk" secondAttribute="top" id="YA0-CC-Prw"/>
+                                        <constraint firstAttribute="trailing" secondItem="noC-QT-Frv" secondAttribute="trailing" id="btI-P9-kdB"/>
+                                        <constraint firstAttribute="bottom" secondItem="noC-QT-Frv" secondAttribute="bottom" id="via-uN-ULe"/>
+                                        <constraint firstItem="noC-QT-Frv" firstAttribute="leading" secondItem="7cm-IK-fPk" secondAttribute="leading" constant="8" id="xZZ-B0-IoD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionTextView" destination="noC-QT-Frv" id="MRj-j4-R6c"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kapuDiscussingCell" rowHeight="69" id="ubi-aF-cez" customClass="KapuDiscussingCell" customModule="KAPU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="182" width="359" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ubi-aF-cez" id="GKE-bA-EeS">
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="68"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="157 people discussing this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYk-He-Ae1">
+                                            <rect key="frame" x="8" y="24" width="280" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty3-2X-nkQ">
+                                            <rect key="frame" x="309" y="24" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.25882352941176467" green="0.74509803921568629" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="descriptionLabel" destination="oj7-PE-Xl0" id="gh8-SJ-irV"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -515,11 +550,11 @@
                         </connections>
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="359" height="150"/>
+                    <size key="freeformSize" width="359" height="250"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiC-GZ-8jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4348" y="-490.25487256371815"/>
+            <point key="canvasLocation" x="4336.8000000000002" y="-504.64767616191909"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aTb-Ol-SlU">
@@ -902,7 +937,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5R-3J-IWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4348" y="95.352323838080963"/>
+            <point key="canvasLocation" x="4337" y="69"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="Oit-xu-UJ3">

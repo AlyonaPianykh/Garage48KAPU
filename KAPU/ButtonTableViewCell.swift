@@ -14,7 +14,7 @@ class ButtonTableViewCell: UITableViewCell {
 
    override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
     }
 
     @IBAction func addPressed(_ sender: Any) {
