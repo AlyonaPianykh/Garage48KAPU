@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class KapuCheckboxTableViewController: UITableViewController {
 
@@ -17,12 +21,6 @@ class KapuCheckboxTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,7 +75,7 @@ class KapuCheckboxTableViewController: UITableViewController {
         return footerView
     }
     
-    func votePressed() -> NSString {
+    func votePressed() -> String {
         voteIsPressed = true
         self.tableView.frame = CGRect.init(x: self.tableView.frame.origin.x, y: self.tableView.frame.origin.x, width: self.tableView.frame.width, height: self.tableView.frame.height - 70.0)
         
@@ -85,8 +83,18 @@ class KapuCheckboxTableViewController: UITableViewController {
         let selectedCell: KapuCheckboxCell = tableView.cellForRow(at: selectedIndexPath!) as! KapuCheckboxCell
         
         self.tableView.reloadData()
+        let result = selectedCell.optionLabel.text! as String
+        self.updateKapu(option: result)
+        return result
+    }
+    
+    func updateKapu(option: String) {
+        let kapuLoader = KapuLoader()
         
-        return selectedCell.optionLabel.text! as NSString
+       let userName = FIRAuth.auth()?.currentUser?.displayName
+        if let kapu = self.kapu {
+            kapuLoader.addAnswer(to: kapu, authorName: userName!, selectedOptionName: option)
+        }
     }
     
     /*

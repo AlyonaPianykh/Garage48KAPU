@@ -35,6 +35,7 @@ class Kapu {
          location: NSDictionary,
          options: NSDictionary,
          image: UIImage?) {
+        self.uid = uid
         self.title = title
         self.body = body
         self.creatorName = creatorName
@@ -99,8 +100,15 @@ class KapuLoader {
         print("\(allKapus)")
     }
     
-    func addAnswerToKapu(uid: String){
-              
+    func addAnswer(to kapu: Kapu, authorName: String, selectedOptionName: String){
+        
+        let key = self.databaseRef.child(KAPUS).child(kapu.uid).child("answers").childByAutoId().key
+        let answer = ["author": authorName,
+                      "selectedOptionName": selectedOptionName]
+
+        let childUpdates = ["/\(KAPUS)/\(kapu.uid)/answers/\(key)": answer]
+        self.databaseRef.updateChildValues(childUpdates) { (error, ref) in
+        }
     }
     
     func getImageFromFB(name: String, index: Int, completion:@escaping (_ imagePath: UIImage, _ index: Int)->()) {

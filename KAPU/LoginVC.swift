@@ -46,11 +46,20 @@ class LoginVC: UIViewController {
                 print("\(error)")
                 return
             }
-            
+            if let user = user {
+                let changeRequest = user.profileChangeRequest()
+                changeRequest.displayName = firstname
+                changeRequest.commitChanges { error in
+                    if error != nil {
+                        print("An error occured.")
+                    } else {
+                        print("name saved")
+                    }
+                }
+            }
             PushManager.shared.subscribeToAllFeeds()
             
             let usersTable = FIRDatabase.database().reference().child("users")
-            
             usersTable.child(userId).setValue(["email" : email, "first_name" : firstname])
         }
     }
