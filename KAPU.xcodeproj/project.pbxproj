@@ -106,6 +106,7 @@
 		3DC021831E6AB5050061FD74 /* KAPU */ = {
 			isa = PBXGroup;
 			children = (
+				9BBC7AA51E6B41CB00A63AB5 /* TableViewCells */,
 				492169231E6B6D3800526A76 /* SingleKapu */,
 				9B52796B1E6AE43600819AA8 /* IssueTableViewCell.swift */,
 				9B5279691E6AE3E100819AA8 /* IssuesViewController.swift */,
@@ -132,15 +133,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		9BBC7AA51E6B41CB00A63AB5 /* TableViewCells */ = {
 		492169231E6B6D3800526A76 /* SingleKapu */ = {
 			isa = PBXGroup;
 			children = (
+				C2A0AD761E6B1AD600E42146 /* ButtonTableViewCell.swift */,
+				C2A0AD741E6B1A6900E42146 /* TextAreaTableViewCell.swift */,
+				C2A0AD721E6B197700E42146 /* TextFieldTableViewCell.swift */,
+				9BBC7AA61E6B41F700A63AB5 /* FilterTableViewCell.swift */,
 				492169191E6B6C0500526A76 /* KapuViewController.swift */,
 				4921691D1E6B6C8100526A76 /* KapuDescriptionTableViewController.swift */,
 				4921691F1E6B6CB900526A76 /* KapuCheckboxTableViewController.swift */,
 				492169211E6B6CD400526A76 /* KapuChartViewController.swift */,
 				4921692A1E6B6E3500526A76 /* Cells */,
 			);
+			name = TableViewCells;
 			name = SingleKapu;
 			sourceTree = "<group>";
 		};
@@ -291,6 +298,7 @@
 				9B52796C1E6AE43600819AA8 /* IssueTableViewCell.swift in Sources */,
 				492169221E6B6CD400526A76 /* KapuChartViewController.swift in Sources */,
 				9B52796A1E6AE3E100819AA8 /* IssuesViewController.swift in Sources */,
+				3D546A0C1E6B737D00108E4F /* PushManager.swift in Sources */,
 				492169251E6B6DF300526A76 /* KapuAddressCell.swift in Sources */,
 				C2A0AD711E6B114B00E42146 /* AddKapuTableVC.swift in Sources */,
 				492169201E6B6CB900526A76 /* KapuCheckboxTableViewController.swift in Sources */,
