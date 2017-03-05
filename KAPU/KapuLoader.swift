@@ -153,7 +153,12 @@ class KapuLoader {
         }
         
         let childUpdates = ["/\(KAPUS)/\(key)": post]
-        self.databaseRef.updateChildValues(childUpdates)
+        
+        PushManager.shared.sendNewFeed(with: kapu.title, description: kapu.body, id: key)
+        
+        self.databaseRef.updateChildValues(childUpdates) { (error, ref) in
+            
+        }
         
         for option in options {
             let keyOption = self.databaseRef.child(KAPUS).child(key).child("options").childByAutoId().key

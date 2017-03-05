@@ -8,6 +8,8 @@
 	<string>Used to  take photos</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Used to take photos</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
