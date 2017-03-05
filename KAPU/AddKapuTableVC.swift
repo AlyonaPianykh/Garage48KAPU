@@ -83,7 +83,8 @@ class AddKapuVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         let options = self.getOptions()
         
         let userName = FIRAuth.auth()?.currentUser?.displayName
-        let kapu = Kapu(title: title,
+        let kapu = Kapu(uid: "",
+                        title: title,
                         body: description,
                         categoryName: self.getCategoryName(),
                         creationDate: convertedDateString,

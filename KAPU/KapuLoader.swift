@@ -35,6 +35,7 @@ class Kapu {
          location: NSDictionary,
          options: NSDictionary,
          image: UIImage?) {
+        self.uid = uid
         self.title = title
         self.body = body
         self.creatorName = creatorName
