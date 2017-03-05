@@ -10,10 +10,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
-
-
-
-
+import FirebaseMessaging
 
 class LoginVC: UIViewController {
     var databaseRef: FIRDatabaseReference!
@@ -50,6 +47,8 @@ class LoginVC: UIViewController {
                 return
             }
             
+            PushManager.shared.subscribeToAllFeeds()
+            
             let usersTable = FIRDatabase.database().reference().child("users")
             
             usersTable.child(userId).setValue(["email" : email, "first_name" : firstname])
@@ -60,15 +59,21 @@ class LoginVC: UIViewController {
             self.login()
     }
     
+    
     private func login() {
         if let providerData = FIRAuth.auth()?.currentUser?.providerData {
                 print("user is signed in")
         } else {
             
-        FIRAuth.auth()?.signIn(withEmail: "test@test.com", password: "qwerty") { (user, error) in
+        FIRAuth.auth()?.createUser(withEmail: "test1@test.com", password: "test123") { (user, error) in
             
             if error == nil {
                 print("You have successfully logged in")
+                
+                PushManager.shared.subscribeToAllFeeds()
+                
+                FIRMessaging.messaging().subscribe(toTopic: "topics/app")
+                
               /*  let kapu = Kapu(title: "Peace On Earth A Wonderful Wish But No Way?",
                                 body: "The following article covers a topic that has recently moved to center stage–at least it seems that way. If you’ve been thinking you need to know more about unconditional love, here’s your",
                                 categoryName: "Transportation",
@@ -79,6 +84,8 @@ class LoginVC: UIViewController {
                 }*/
                 
             } else {
+                
+                PushManager.shared.subscribeToAllFeeds()
                 
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 
