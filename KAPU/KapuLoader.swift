@@ -91,12 +91,10 @@ class KapuLoader {
         
         let childUpdates = ["/\(KAPUS)/\(key)": post]
         
+        PushManager.shared.sendNewFeed(with: kapu.title, description: kapu.body, id: key)
         
         self.databaseRef.updateChildValues(childUpdates) { (error, ref) in
             
-            if error == nil {
-                PushManager.shared.sendNewFeed(with: kapu.title, description: kapu.body, id: key)
-            }
         }
         
         for option in options {

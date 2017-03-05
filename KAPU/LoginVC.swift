@@ -47,6 +47,8 @@ class LoginVC: UIViewController {
                 return
             }
             
+            PushManager.shared.subscribeToAllFeeds()
+            
             let usersTable = FIRDatabase.database().reference().child("users")
             
             usersTable.child(userId).setValue(["email" : email, "first_name" : firstname])
@@ -62,7 +64,7 @@ class LoginVC: UIViewController {
                 print("user is signed in")
         } else {
             
-        FIRAuth.auth()?.signIn(withEmail: "test@test.com", password: "qwerty") { (user, error) in
+        FIRAuth.auth()?.createUser(withEmail: "test1@test.com", password: "test123") { (user, error) in
             
             if error == nil {
                 print("You have successfully logged in")

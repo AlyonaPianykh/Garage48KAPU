@@ -99,6 +99,11 @@
                             <constraint firstItem="qfg-Iv-gtG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r2n-93-R0j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="61d-lT-nml" id="G0D-Du-86d"/>
+                        <outlet property="firstNameField" destination="Vi1-NT-NYj" id="sh4-71-xer"/>
+                        <outlet property="passwordField" destination="5Yw-X0-Avs" id="ugL-E0-Kjx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -502,7 +507,7 @@
                     <navigationItem key="navigationItem" id="Gqm-4P-lcF">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7wF-8K-0fI">
-                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Infastructure">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
