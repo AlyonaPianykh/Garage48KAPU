@@ -12,6 +12,8 @@ class KapuCheckboxTableViewController: UITableViewController {
 
     var voteIsPressed = false
     var selectedVoteResult = NSString()
+    var kapu: Kapu?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,26 +39,22 @@ class KapuCheckboxTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        guard let kapu = self.kapu else {
+            return 0
+        }
+        return kapu.options.allKeys.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var text = ""
+        if let kapu = self.kapu {
+            text = kapu.options.allValues[indexPath.row] as! String
+        }
         let cell: KapuCheckboxCell = tableView.dequeueReusableCell(withIdentifier: "KapuCheckboxCell", for: indexPath) as! KapuCheckboxCell
         
-        switch indexPath.row {
-        case 0:
-            cell.optionLabel.text = "Pub"
-        case 1:
-            cell.optionLabel.text = "Park"
-        case 2:
-            cell.optionLabel.text = "Parking"
-        case 3:
-            cell.optionLabel.text = "Coffe shop"
-        default:
-            cell.optionLabel.text = "Grossery store"
-        }
-
+            cell.optionLabel.text = text
+        
         return cell
     }
     

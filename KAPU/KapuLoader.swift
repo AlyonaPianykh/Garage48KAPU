@@ -16,6 +16,7 @@ let KAPUS: String = "requests"
 let USERS: String = "users"
 
 class Kapu {
+    let uid: String
     let body: String
     let categoryName: String
     let creatorName: String
@@ -25,7 +26,8 @@ class Kapu {
     let options: NSDictionary
     var image: UIImage?
     
-    init(title: String,
+    init(uid: String,
+         title: String,
          body: String,
          categoryName: String,
          creationDate: String,
@@ -70,7 +72,8 @@ class KapuLoader {
         let allKeys = kapus.allKeys
         for key in allKeys {
             if let kapu = kapus[key] as! NSDictionary? {
-                let newItem = Kapu(title: kapu.value(forKey: "title") as! String,
+                let newItem = Kapu(uid: key as! String,
+                                   title: kapu.value(forKey: "title") as! String,
                                    body: kapu.value(forKey: "body") as! String,
                                    categoryName: kapu.value(forKey: "categoryName") as! String,
                                    creationDate: kapu.value(forKey: "creationDate") as! String,
@@ -94,6 +97,10 @@ class KapuLoader {
         }
         
         print("\(allKapus)")
+    }
+    
+    func addAnswerToKapu(uid: String){
+              
     }
     
     func getImageFromFB(name: String, index: Int, completion:@escaping (_ imagePath: UIImage, _ index: Int)->()) {

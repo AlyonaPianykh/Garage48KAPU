@@ -12,6 +12,7 @@ class IssuesViewController: UIViewController {
 
     @IBOutlet var table: UITableView!
     let kapus = KapuLoader()
+    var selectedKapuIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,4 +69,21 @@ extension IssuesViewController :UITableViewDataSource{
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // goToKapuDetails
+        self.selectedKapuIndex = indexPath.row
+       // performSegue(withIdentifier: "goToKapuDetails", sender: nil)
+
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // get a reference to the second view controller
+        let secondViewController = segue.destination as! KapuViewController
+        
+        // set a variable in the second view controller with the data to pass
+        secondViewController.kapu = self.kapus.allKapus[self.selectedKapuIndex]
+    }
 }

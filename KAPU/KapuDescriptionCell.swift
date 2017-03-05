@@ -10,6 +10,9 @@ import UIKit
 
 class KapuDescriptionCell: UITableViewCell {
 
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

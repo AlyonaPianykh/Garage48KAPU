@@ -9,7 +9,7 @@
 import UIKit
 
 class KapuChartViewController: UIViewController {
-
+    var kapu: Kapu?
     override func viewDidLoad() {
         super.viewDidLoad()
 

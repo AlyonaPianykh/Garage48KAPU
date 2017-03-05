@@ -10,6 +10,9 @@ import UIKit
 
 class KapuAddressCell: UITableViewCell {
 
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
