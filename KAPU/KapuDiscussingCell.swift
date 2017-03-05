@@ -1,21 +1,18 @@
 //
-//  TextAreaTableViewCell.swift
+//  KapuDiscussingCell.swift
 //  KAPU
 //
-//  Created by Alyonka on 3/4/17.
+//  Created by Oleksii Pelekh on 3/5/17.
 //  Copyright © 2017 Vasyl Khmil. All rights reserved.
 //
 
 import UIKit
 
-class TextAreaTableViewCell: UITableViewCell {
+class KapuDiscussingCell: UITableViewCell {
 
-    @IBOutlet weak var textField: UITextView!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
