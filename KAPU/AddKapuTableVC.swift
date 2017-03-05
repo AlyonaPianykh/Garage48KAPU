@@ -239,11 +239,11 @@ extension AddKapuVC: UITableViewDataSource{
         switch(indexPath.section) {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: "textFieldCell", for: indexPath) as! TextFieldTableViewCell
-            cell?.textLabel?.placeholderText = "Ask a question"
+           // cell?.textLabel?.placeholderText = "Ask a question"
             break
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "textAreaCell", for: indexPath) as! TextAreaTableViewCell
-            cell?.textLabel?.placeholderText = "Describe the purpose youe Kapu"
+          //  cell?.textLabel?.placeholderText = "Describe the purpose youe Kapu"
             break
         case 2:
             switch indexPath.row {
